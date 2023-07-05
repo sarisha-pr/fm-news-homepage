@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Base */
+@layer base {
+    html, body {
+        @apply font-inter font-normal text-gunmetal;
+    }
+
+    p {
+        @apply text-[15px] leading-[26px];
+    }
+}
+/* End Base */
+
+@layer components {
+    header .header-menu {
+        @apply max-md:py-7 max-md:px-6 max-md:w-64 max-md:fixed top-0 bottom-0 -right-64 bg-almost-white;
+    }
+
+    header .header-menu.active {
+        -webkit-animation: slideOpen 0.5s ease forwards;
+        animation: slideOpen 0.5s ease forwards;
+    }
+
+    header .header-menu.inactive {
+        -webkit-animation: slideClose 0.5s ease forwards;
+        animation: slideClose 0.5s ease forwards;
+    }
+
+    @keyframes slideOpen {
+        0% { @apply -right-64; }
+        100% { @apply right-0; }
+    }
+
+    @-webkit-keyframes slideOpen {
+        0% { @apply -right-64; }
+        100% { @apply right-0; }
+    }
+
+    @keyframes slideClose {
+        0% { @apply right-0; }
+        100% { @apply -right-64; }
+    }
+
+    @-webkit-keyframes slideClose {
+        0% { @apply right-0; }
+        100% { @apply -right-64; }
+    }
+}

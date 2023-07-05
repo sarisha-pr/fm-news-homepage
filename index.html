@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link href="./assets/css/dist/style.css" rel="stylesheet">
+
+  <title>Frontend Mentor | News homepage</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="cover" class="fixed opacity-50 mix-blend-normal duration-200 bg-dark-space-blue"></div>
+  <header class="pt-7 pb-8 md:pt-24 md:pb-14">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div>
+          <a href="#">
+            <img src="./assets/images/logo.svg" alt="Logo">
+          </a>
+        </div>
+
+        <div class="header-menu" id="headerMenu">
+          <div class="flex justify-end pb-20 md:hidden">
+            <a href="javascript:void(0)" class="block" onClick="closeMenu()">
+              <img src="./assets/images/icon-menu-close.svg" alt="Close menu button">
+            </a>
+          </div>
+
+          <ul class="flex max-md:flex-col gap-6 md:gap-10">
+            <li>
+              <a href="#"
+                class="text-lg duration-200 text-dark-space-blue hover:text-light-vermillion"><span>Home</span></a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-lg duration-200 text-dark-space-blue hover:text-light-vermillion"><span>New</span></a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-lg duration-200 text-dark-space-blue hover:text-light-vermillion"><span>Popular</span></a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-lg duration-200 text-dark-space-blue hover:text-light-vermillion"><span>Trending</span></a>
+            </li>
+            <li>
+              <a href="#"
+                class="text-lg duration-200 text-dark-space-blue hover:text-light-vermillion"><span>Categories</span></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="md:hidden">
+          <a href="javascript:void(0)" onClick="openMenu()">
+            <img src="./assets/images/icon-menu.svg" alt="Open menu button">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-20">
+    <div class="container">
+      <div class="flex flex-col md:flex-row justify-between gap-[30px] md:gap-0 pb-16 md:pb-[4.375rem]">
+        <div class="flex-[0_0_100%] md:flex-[0_0_calc((100%-30px)*(65/100))]">
+          <div class="pb-6 md:pb-7">
+            <img src="./assets/images/image-web-3-mobile.jpg" alt="Top Image" class="w-full md:hidden">
+            <img src="./assets/images/image-web-3-desktop.jpg" alt="Top Image" class="w-full max-md:hidden">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-[30px]">
+            <div>
+              <h1 class="text-[40px] md:text-[56px] font-extrabold leading-none text-dark-space-blue">The Bright Future
+                of Web 3.0?</h1>
+            </div>
+
+            <div>
+              <p class="pb-6 md:pb-[30px]">We dive into the next evolution of the web that claims to put the power of
+                the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+
+              <a href="javascript:void(0)"
+                class="flex justify-center items-center w-[185px] h-[48px] font-bold text-sm leading-[24px] text-almost-white duration-200 bg-light-vermillion hover:bg-dark-space-blue"><span>Read
+                  more</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-[0_0_100%] md:flex-[0_0_calc((100%-30px)*(35/100))]">
+          <div class="px-5 py-6 md:px-6 md:py-8 bg-dark-space-blue">
+            <h2 class="pb-8 text-2xl md:text-[40px] font-bold leading-none text-yellow">New</h2>
+
+            <ul class="flex flex-col">
+              <li class="pb-[30px] mb-[30px] border-b border-b-[#5E607A]">
+                <a href="#"
+                  class="text-xl font-extrabold leading-tight duration-200 text-almost-white hover:text-yellow">Hydrogen
+                  VS Electric Cars</a>
+                <p class="pt-2 text-silver">Will hydrogen-fueled cars ever catch up to EVs?</p>
+              </li>
+              <li class="pb-[30px] mb-[30px] border-b border-b-[#5E607A]">
+                <a href="#"
+                  class="text-xl font-extrabold leading-tight duration-200 text-almost-white hover:text-yellow">The
+                  Downsides of AI Artistry</a>
+                <p class="pt-2 text-silver">What are the possible adverse effects of on-demand AI image generation?</p>
+              </li>
+              <li class="">
+                <a href="#"
+                  class="text-xl font-extrabold leading-tight duration-200 text-almost-white hover:text-yellow">Is VC
+                  Funding Drying Up?</a>
+                <p class="pt-2 text-silver">Private funding by VC firms is down 50% YOY. We take a look at what that
+                  means.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[1.875rem]">
+        <div class="flex gap-6 md:max-lg:flex-col">
+          <div class="flex-[0_0_6.25rem] md:max-lg:basis-auto md:max-lg:h-48">
+            <img src="./assets/images/image-retro-pcs.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-grow">
+            <p class="pb-3 font-bold leading-none text-[2rem] text-silver">01</p>
+            <a href="javascript:void(0)"
+              class="pb-2 font-extrabold leading-tight text-[1.125rem] duration-200 text-dark-space-blue hover:text-light-vermillion">Reviving
+              Retro PCs</a>
+            <p class="leading-relaxed text-[0.9375rem] text-gunmetal">What happens when old PCs are given modern
+              upgrades?</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 md:max-lg:flex-col">
+          <div class="flex-[0_0_6.25rem] md:max-lg:basis-auto md:max-lg:h-48">
+            <img src="./assets/images/image-top-laptops.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-grow">
+            <p class="pb-3 font-bold leading-none text-[2rem] text-silver">02</p>
+            <a href="javascript:void(0)"
+              class="pb-2 font-extrabold leading-tight text-[1.125rem] duration-200 text-dark-space-blue hover:text-light-vermillion">Top
+              10 Laptops of 2022</a>
+            <p class="leading-relaxed text-[0.9375rem] text-gunmetal">Our best picks for various needs and budgets.</p>
+          </div>
+        </div>
+
+        <div class="flex gap-6 md:max-lg:flex-col">
+          <div class="flex-[0_0_6.25rem] md:max-lg:basis-auto md:max-lg:h-48">
+            <img src="./assets/images/image-gaming-growth.jpg" alt="" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-grow">
+            <p class="pb-3 font-bold leading-none text-[2rem] text-silver">03</p>
+            <a href="javascript:void(0)"
+              class="pb-2 font-extrabold leading-tight text-[1.125rem] duration-200 text-dark-space-blue hover:text-light-vermillion">The
+              Growth of Gaming</a>
+            <p class="leading-relaxed text-[0.9375rem] text-gunmetal">How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const menu = document.getElementById('headerMenu');
+    const cover = document.getElementById('cover');
+    const body = document.getElementsByTagName('body')[0];
+
+    function openMenu() {
+      console.log(body.length);
+      body.classList.add('overflow-hidden');
+      cover.classList.add('inset-0');
+
+      menu.classList.remove('inactive');
+      menu.classList.add('active');
+    }
+
+    function closeMenu() {
+      body.classList.remove('overflow-hidden');
+      cover.classList.remove('inset-0');
+
+      menu.classList.remove('active');
+      menu.classList.add('inactive');
+    }
+  </script>
+</body>
+
+</html>
